@@ -1,0 +1,13 @@
+.bg_lightgreen {
+    background: rgb(15, 133, 121);
+}
+
+.outer_border {
+    border: 2px solid rgb(13, 172, 225);
+    max-width: 850px;
+    margin: 0px auto;
+}
+
+.bg_white {
+    background-color: white;
+}

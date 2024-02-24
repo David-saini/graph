@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chart js</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="bg_lightgreen">
+    <div class="container">
+        <div class="outer_border my-5">
+            <h1 class="text-white mb-0">2024 Home price forecasts</h1>
+            <p class="text-white pt-3">Percent Appreciation/depreciation as of 1/23/2024</p>
+
+            <canvas id="myChart" class="bg_white"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Average of All 8', 'MBA', 'Zillow', 'Fannie Mae', 'Freddic Mae', 'HPES', 'Goldman sachs', 'NAR', 'Realtor.com'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [2.1, 4.1, 3.5, 3.2, 2.6, 2.4, 1.9, 0.7, -1.7],
+                    backgroundColor: [
+                        'skyblue',
+                        'lightgreen',
+                        'lightgreen',
+                        'lightgreen',
+                        'lightgreen',
+                        'lightgreen',
+                        'lightgreen',
+                        'lightgreen',
+                        'red'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
